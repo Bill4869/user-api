@@ -18,7 +18,7 @@ class UserModel(db.Model):
         return f"User(name = {name}, sex = {sex}, age = {age})"
 
 # you want to run this method only once so your database wont be overwriten
-db.create_all()
+# db.create_all()
 
 user_info = reqparse.RequestParser()
 user_info.add_argument("name", type=str, help="Name is required", required=True)
